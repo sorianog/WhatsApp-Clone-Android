@@ -6,6 +6,6 @@ import com.example.whatsappclone.R
 const val EMPTY_TITLE = "empty_title"
 val TAB_TITLES = mapOf( 1 to "chats", 2 to "status", 3 to "calls")
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(R.layout.fragment_home) {
     // TODO
 }
