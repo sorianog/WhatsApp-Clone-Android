@@ -1,7 +1,6 @@
 package com.example.whatsappclone.ui.channel
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -70,7 +69,7 @@ class ChannelFragment : Fragment() {
 
         binding.viewModel = viewModel
         binding.messageList.setViewModel(viewModel, this)
-        // binding.messageInputView.setViewModel(viewModel, this)
+        binding.messageInputView.setViewModel(viewModel, this)
 
         val messageListView: MessageListView = view!!.findViewById(R.id.messageList)
 
