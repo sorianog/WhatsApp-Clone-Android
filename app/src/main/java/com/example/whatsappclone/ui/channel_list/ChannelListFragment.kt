@@ -49,7 +49,7 @@ class ChannelListFragment : Fragment() {
         val viewModel: ChannelListViewModel by viewModels()
         binding.viewModel = viewModel
         val  adapter =  ChannelListItemAdapter(activity)
-        // adapter.setViewHolderFactory(CustomViewHolderFactory())
+        adapter.setViewHolderFactory(CustomViewHolderFactory())
         binding.channelList.setViewModel(viewModel, this, adapter)
 
         // query all channels of type messaging

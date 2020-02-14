@@ -9,6 +9,17 @@ import java.text.SimpleDateFormat
 
 class CustomChannelListItemViewHolder( v : View) : ChannelListItemViewHolder(v) {
 
-    // TODO
+    private val dateFormat = SimpleDateFormat("MM/dd/YY")
+
+    override fun configLastMessage(channelState: ChannelState) {
+        val lastMessage = channelState.lastMessage
+        val tvDate = itemView.findViewById(R.id.tv_date) as TextView
+        if (lastMessage == null) {
+            tvDate.text = ""
+            return
+        }
+        if (lastMessage.isToday) tvDate.text = lastMessage.time
+        else tvDate.text = dateFormat.format(lastMessage.createdAt)
+    }
 
 }
